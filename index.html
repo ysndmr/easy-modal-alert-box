@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Easy Modal / Alert Box</title>
+	<link rel="stylesheet" href="easy-modal.min.css">
+	<style>
+	</style>
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="wrapper">
+	<header>
+		<h1>Easy Modal / Alert Box with <code>Vanilla JS</code> and <code>CSS3</code> transitions and animations.
+<span>Generic Javascript plugin with different modal window appearances.</span>
+		</h1>
+	</header>
+	<main>
+		<div class="main-wrapper">
+			<div>
+				Easy Modal / Alert Box is a modern communication library enriched with Vanilla JS and CSS3  that are highly configurable, clear, simple and easily configurable on mobile devices and can be customized to suit your style.
+
+			    Here are some modern ways of showing them using CSS transitions and animations.</div>
+			<div>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="fadein" data-modal-type="error">fadein - modalbox - error</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="fadein" data-modal-type="error">fadein - alertbox - error</a>
+
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="slideRight" data-modal-type="info">slideRight - alertbox - info</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="slideRight" data-modal-type="info">slideRight - modalbox - info</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="slideBottom" data-modal-type="succes">slideBottom - modalbox - succes</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="slideBottom" data-modal-type="succes">slideBottom - alertbox - succes</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="fall" data-modal-type="warn">fall - alertbox - warn</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="flid3d" data-modal-type="error">flid3d - modalbox - error</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="flid3dVertical" data-modal-type="info">flid3dVertical - alertbox - info</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="scale" data-modal-type="warn">scale - modalbox - warn</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="modal" data-css="rotateLeft" data-modal-type="error">default - modalbox - rotateLeft</a>
+				<a href="javascript:void(0)" class="open-modal" data-type="alert" data-css="folding" data-modal-type="succes">default - alertbox - folding</a>
+			</div>
+
+	</main>
+	<section>
+						<table>
+
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">title</td>
+<td align="center">string</td>
+<td align="center">Modal Box title</td>
+<td align="left">Set the your modal box title (optional). If yopu dont want title you can set '' string.</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="center">string</td>
+<td align="center">Modal Box description</td>
+<td align="left">Set the your modal box description / spot (optional). If yopu dont want title you can set '' string.</td>
+</tr>
+<tr>
+<td align="left">autoOpen</td>
+<td align="center">integer</td>
+<td align="center">false</td>
+<td align="left">Set the automatic open immediately.</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="center">string</td>
+<td align="center">modal</td>
+<td align="left">Set the template type ('modal' or 'alert' box)</td>
+</tr>
+<tr>
+<td align="left">close</td>
+<td align="center">boolean</td>
+<td align="center">true</td>
+<td align="left">You can set close button or not. If you dont want just change with false.</td>
+</tr>
+<tr>
+<td align="left">closeText</td>
+<td align="center">string</td>
+<td align="center">X</td>
+<td align="left">If you want you can change with any string ( Close, open, Yes or No )</td>
+</tr>
+<tr>
+<td align="left">maxWidth</td>
+<td align="center">integer</td>
+<td align="center">''</td>
+<td align="left">Set maximum width of your box. Not requried.</td>
+</tr>
+<tr>
+<td align="left">minWidth</td>
+<td align="center">integer</td>
+<td align="center">''</td>
+<td align="left">Set minumum width of your box. Not requried.</td>
+</tr>
+<tr>
+<td align="left">overlay</td>
+<td align="center">boolean</td>
+<td align="center">true</td>
+<td align="left">For use overlay. If you dont want you can change with false.</td>
+</tr>
+<tr>
+<td align="left">setTimeout</td>
+<td align="center">integer</td>
+<td align="center">false</td>
+<td align="left">Set the automatic close after millisecond.</td>
+</tr>
+<tr>
+<td align="left">overlayClass</td>
+<td align="center">string</td>
+<td align="center">easy-modal-overlay</td>
+<td align="left">You can change with your own class.</td>
+</tr>
+<tr>
+<td align="left">modalTypeClass</td>
+<td align="center">array</td>
+<td align="center">default</td>
+<td align="left">For which purpose you can choose it. 'error', 'info', 'warn', 'succes'.</td>
+</tr>
+</tbody>
+</table>
+	</section>
+</div>
+</body>
+<script type="text/javascript" src="easy-modal-alert.min.js"></script>
+<script>
+let button = document.getElementsByClassName('open-modal');
+
+
+
+function addClick(th) {
+
+let dataAttrType = th.getAttribute('data-type');
+let dataAttrCss = th.getAttribute('data-css');
+let dataModalType = th.getAttribute('data-modal-type');
+
+var modal = new SimplyModal({
+  type : dataAttrType,
+  modalTypeClass : dataModalType,
+  className : dataAttrCss,
+   maxWidth: 400,
+   minWidth: 200,
+
+});
+
+ modal.open();
+
+}
+
+for (let i in button) {
+  button[i].onclick = function() {
+    addClick(this);
+  };
+}
+</script>
+</html>
