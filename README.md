@@ -28,7 +28,7 @@ Call the plugin when the body is load:
 ```
 // Instantiate new modal
 
-$.easyModal  (({
+var modal = new SimplyModal({
       title: "Modal Box",
       content: "Modal Description",
       autoOpen: false,
@@ -42,8 +42,10 @@ $.easyModal  (({
       overlayClass: 'easy-modal-overlay',
       modalTypeClass: ['error', 'info', 'warn', 'succes'],
       closeText: 'X'
-  }
+
 });
+ modal.open();
+}
 ```
 | Name  | Type | Default  | Description |
 | :---          |     :---:      |   :---: |  :---  |
