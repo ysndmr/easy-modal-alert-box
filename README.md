@@ -50,10 +50,10 @@ var modal = new SimplyModal({
 | Name  | Type | Default  | Description |
 | :---          |     :---:      |   :---: |  :---  |
 | title  | string  | Modal Box title  | Set the your modal box title (optional). If yopu dont want title you can set '' string.  |
-| description | string | Modal Box description | Set the your modal box description / spot (optional). If yopu dont want title you can set '' string. |
+| content | string | Modal Box description | Set the your modal box description / spot (optional). If yopu dont want title you can set '' string. |
 | autoOpen | integer | false | Set the automatic open immediately. |
 | type | string | modal | Set the template type ('modal' or 'alert' box) |
-| close | boolean | true | You can set close button or not. If you dont want just change with false. |
+| closeButton | boolean | true | You can set close button or not. If you dont want just change with false. |
 | closeText | string | X | If you want you can change with any string ( Close, open, Yes or No ) |
 | maxWidth  integer |'' | Set maximum width of your box. Not requried. |
 | minWidth | integer | '' | Set minumum width of your box. Not requried. |
@@ -61,6 +61,8 @@ var modal = new SimplyModal({
 | setTimeout | integer | false | Set the automatic close after millisecond. |
 | overlayClass | string | easy-modal-overlay | You can change with your own class. |
 | modalTypeClass | array | default | For which purpose you can choose it. 'error', 'info', 'warn', 'succes'. |
+| className | ['fadein', 'slideRight', 'slideBottom', 'fall', 'flid3d', 'flid3dVertical', 'scale', 'folding', 'rotateLeft'],
+
 
 
 ## Css3 Effects
