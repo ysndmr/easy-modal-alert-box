@@ -22,6 +22,10 @@ Responsive, Customizable and clean code
 <script src="easy-modal.min.js"></script>
 ```
 
+```
+npm i easy-modal-alert-box
+```
+
 
 Call the plugin when the body is load:
 
