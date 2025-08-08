@@ -1,0 +1,8 @@
+{
+  "name": "easy-modal-alert-box",
+  "version": "1.0.0",
+  "description": "Lightweight modal alert box component.",
+  "scripts": {
+    "test": "echo \"No tests\" && exit 0"
+  }
+}
