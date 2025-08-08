@@ -1,8 +1,22 @@
 {
   "name": "easy-modal-alert-box",
-  "version": "1.0.0",
-  "description": "Lightweight modal alert box component.",
+  "version": "2.0.0",
+  "description": "Lightweight modal alert box component as an Angular service.",
   "scripts": {
-    "test": "echo \"No tests\" && exit 0"
+    "test": "jest"
+  },
+  "dependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "rxjs": "^7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "^0.13.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.6.0",
+    "jest-preset-angular": "^13.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.2.0"
   }
 }
